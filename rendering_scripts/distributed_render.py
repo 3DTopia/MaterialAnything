@@ -84,7 +84,7 @@ def worker(
                 # f"export DISPLAY=:0.{gpu} &&"
                 # f" GOMP_CPU_AFFINITY='0-47' OMP_NUM_THREADS=48 OMP_SCHEDULE=STATIC OMP_PROC_BIND=CLOSE "
                 f" CUDA_VISIBLE_DEVICES={gpu} "
-                f" blender -b -P render_scripts/blender_script_material.py --"
+                f" blender -b -P rendering_scripts/blender_script_material.py --"
                 f" --object_path {item}"
                 f" --output_dir {args.local_output_dir}"
                 f" --resolution {args.resolution}"
