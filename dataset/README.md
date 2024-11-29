@@ -1,0 +1,1 @@
+The file `material3d_large.json` includes all 120,000 objects with material maps, while `material3d.json` is a subset containing objects with both material maps and prompts.
