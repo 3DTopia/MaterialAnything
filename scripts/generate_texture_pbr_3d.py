@@ -171,9 +171,6 @@ def init_args():
         help="the angle between the vector from the object to the camera and the horizontal plane")
     parser.add_argument("--azim", type=float, default=180,
         help="the angle between the vector from the object to the camera and the vertical plane")
-    
-    # NOTE added by huangxin
-    # parser.add_argument("--image2materials_model", type=str, default="/mnt/hwfile/3dobject_aigc/huangxin/logs/20240815_sd21_tf_pbr_512_norgb_share_all_linear/pipeckpts_saved_202000")
     parser.add_argument("--image2materials_model", type=str, default="./pretrained_models/material_estimator")
     parser.add_argument("--uvrefine_model", type=str, default="./pretrained_models/material_refiner")
 

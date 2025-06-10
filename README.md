@@ -136,6 +136,8 @@ normal, and confidence mask. The confidence mask serves as additional guidance f
 addressing lighting variations in the input image and enhancing consistency across generated multi-view materials. 
 These materials are then unwrapped into UV space and refined by a material refiner.
 
+## Acknowledgement
+We would like to thank [Text2Tex](https://github.com/daveredrum/Text2Tex) or providing an excellent and powerful codebase for texture generation. A significant portion of our code is based on their repository.
 
 ## Citation
 If you find this work helpful for your research, please cite:
