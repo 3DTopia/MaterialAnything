@@ -11,3 +11,4 @@ __pycache__
 dataset/outputs
 rendering_scripts/rendered_uid.txt
 rendering_scripts/timeout_uid.txt
+pretrained_models/

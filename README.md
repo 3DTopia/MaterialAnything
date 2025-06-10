@@ -10,7 +10,34 @@ Material Anything:</b> A PBR material generation model for various 3D meshes, in
 
 ---
 
-## Material3D Dataset (Newly Updated) 
+## Inference Setup  (Newly Updated) 
+The setup is the same as the original [Text2Tex](https://github.com/daveredrum/Text2Tex). After install PyTorch and PyTorch3D, You can install dependencies:
+```bash
+pip install -r requirements.txt
+```
+## Download Models
+You can download our models on HuggingFace: [material_estimator](https://huggingface.co/xanderhuang/material_estimator) and [material_refiner](https://huggingface.co/xanderhuang/material_refiner). We provide the script to download load these models.
+```sh
+bash ./download_models.sh
+```
+After downloading, the `pretrained_models/` is structured like:
+```
+./pretrained_models
+├── material_estimator/
+└── material_refiner/
+```
+
+## Quickstart
+
+The `bash` directory contains tools for generating PBR materials for a texture-less mesh. The workflow involves three main steps:
+1. Generating **albedo**, **roughness**, **metallic**, and **bump** maps
+2. Rendering videos using Blender
+You can run the entire pipeline with a single command. For example:
+```sh
+bash ./bash/test.sh
+```
+
+## Material3D Dataset
 
 **Material3D** consists of over 80,000 3D objects with material maps curated from [Objaverse](https://objaverse.allenai.org/). The object IDs and Blender scripts are publicly available (see `dataset` and `rendering_scripts` folders). Additionally, prompts from [3DTopia](https://github.com/3DTopia/3DTopia) and [Cap3D](https://cap3d-um.github.io/) are also provided.  
 
