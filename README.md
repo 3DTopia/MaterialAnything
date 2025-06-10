@@ -18,38 +18,8 @@ The setup is the same as the original [Text2Tex](https://github.com/daveredrum/T
 ```bash
 pip install -r requirements.txt
 ```
-## Download Models
-You can download our models on HuggingFace: [material_estimator](https://huggingface.co/xanderhuang/material_estimator) and [material_refiner](https://huggingface.co/xanderhuang/material_refiner). We provide the script to download load these models.
-```sh
-bash ./download_models.sh
-```
-After downloading, the `pretrained_models/` is structured like:
-```
-./pretrained_models
-├── material_estimator/
-└── material_refiner/
-```
-
-## Quickstart
-
-The `bash` directory contains tools for generating PBR materials for a texture-less mesh. The workflow involves three main steps:
-1. Generating **albedo**, **roughness**, **metallic**, and **bump** maps
-2. Rendering videos using Blender
-You can run the entire pipeline with a single command. For example:
-```sh
-bash ./bash/test.sh
-```
-
-## Material3D Dataset
-
-**Material3D** consists of 80K+ curated 3D objects with high-quality material maps and annotated text descriptions.  
-- [Object List](dataset/material3d.json) gives IDs for curated 3D objects in Objaverse.   
-- [Caption List](https://github.com/3DTopia/3DTopia/releases/download/data/3DTopia-objaverse-caption-361k.json) gives corresponding text descriptions of the 3D objects.   
-- [Render Script](rendering_scripts) gives Blender scripts that render 3D objects into material view-maps and material UV-maps. Refer to the following instructions for the rendering.
 
 ---
-
-### Install Blender  
 
 Our Blender scripts are based on **Blender 3.2.2**. While newer Blender versions have been tested, some node names have changed, which may cause compatibility issues. It is recommended to install Blender 3.2.2.  
 
@@ -67,6 +37,37 @@ source ~/.bashrc
 ```
 
 ---
+## Download Models
+You can download our models on HuggingFace: [material_estimator](https://huggingface.co/xanderhuang/material_estimator) and [material_refiner](https://huggingface.co/xanderhuang/material_refiner). We provide the script to download load these models.
+```sh
+bash ./download_models.sh
+```
+After downloading, the `pretrained_models/` is structured like:
+```
+./pretrained_models
+├── material_estimator/
+└── material_refiner/
+```
+
+## Quickstart
+
+The `bash` directory contains tools for generating PBR materials for a texture-less mesh. The workflow involves three main steps:
+1. Generating **albedo**, **roughness**, **metallic**, and **bump** maps
+2. Rendering videos using Blender
+
+You can run the entire pipeline with a single command. For example:
+```sh
+bash ./bash/test.sh
+```
+
+## Material3D Dataset
+
+**Material3D** consists of 80K+ curated 3D objects with high-quality material maps and annotated text descriptions.  
+- [Object List](dataset/material3d.json) gives IDs for curated 3D objects in Objaverse.   
+- [Caption List](https://github.com/3DTopia/3DTopia/releases/download/data/3DTopia-objaverse-caption-361k.json) gives corresponding text descriptions of the 3D objects.   
+- [Render Script](rendering_scripts) gives Blender scripts that render 3D objects into material view-maps and material UV-maps. Refer to the following instructions for the rendering.
+
+
 
 ### Material Rendering  
 
